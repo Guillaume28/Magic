@@ -6,13 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.music_row.view.*
 
-class MainAdapter: RecyclerView.Adapter<CustomViewHolder>() {
+class MainAdapter : RecyclerView.Adapter<CustomViewHolder>() {
 
-    val musicTitles = listOf("First title", "Second", "Third", "caca")
+    private val cards = mutableListOf<Card>()
 
     //Number of items
     override fun getItemCount(): Int {
-        return musicTitles.size
+        return cards.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewtype: Int): CustomViewHolder {
@@ -23,12 +23,15 @@ class MainAdapter: RecyclerView.Adapter<CustomViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
-        val musicTitle = musicTitles[position]
-        holder.view.textView_music_title.text = musicTitle
+        val card = cards[position]
+        holder.view.textView_music_title.text = card.text
+    }
+
+    fun addItems(cards: List<Card>): MainAdapter{
+        this.cards += cards
+        return this
     }
 
 }
 
-class CustomViewHolder(val view: View): RecyclerView.ViewHolder(view) {
-
-}
+class CustomViewHolder(val view: View): RecyclerView.ViewHolder(view)
