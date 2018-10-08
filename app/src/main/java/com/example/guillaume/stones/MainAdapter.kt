@@ -31,6 +31,7 @@ class MainAdapter : RecyclerView.Adapter<CustomViewHolder>() {
                 .into(view.imageView)
         view.textView_music_title.text = card.text
         view.textView_card_title.text = card.name
+        view.textView_mana_cost.text = card.manaCost
     }
 
     fun addItems(cards: List<Card>): MainAdapter{

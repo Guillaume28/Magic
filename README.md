@@ -2,10 +2,10 @@
 
 ## TODO
 
-Create and manage decks
+Store, create and manage decks
 
 ## Specs
 
-Storage: **SQLite**
-RxJava
-Fragments
+Storage: **SQLite**  
+RxJava  
+Fragments with bottom navigation
