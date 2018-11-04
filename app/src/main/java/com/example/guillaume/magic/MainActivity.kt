@@ -1,10 +1,10 @@
-package com.example.guillaume.stones
+package com.example.guillaume.magic
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.widget.Toast
-import com.example.guillaume.stones.api.MagicApiService
+import com.example.guillaume.magic.services.api.MagicApiService
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers

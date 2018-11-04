@@ -1,6 +1,6 @@
-package com.example.guillaume.stones.api
+package com.example.guillaume.magic.services.api
 
-import com.example.guillaume.stones.Result
+import com.example.guillaume.magic.Result
 import io.reactivex.Observable
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory

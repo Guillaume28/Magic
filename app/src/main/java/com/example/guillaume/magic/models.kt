@@ -1,4 +1,4 @@
-package com.example.guillaume.stones
+package com.example.guillaume.magic
 
 
 data class Result(val cards: List<Card>)
