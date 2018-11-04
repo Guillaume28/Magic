@@ -5,6 +5,16 @@ import com.example.guillaume.magic.isParsableToInt
 
 class ManaInferrerService {
     companion object {
+        fun parseManaCost(raw: String?): List<Int> {
+            if (raw != null) {
+                return raw.split("([{}])".toRegex())
+                        .filter { !it.isEmpty() }
+                        .map { inferManaType(it) }
+            }
+            // TODO refactor
+            return listOf()
+        }
+
         private fun inferManaType(manaCost: String): Int {
             return when {
                 manaCost.isParsableToInt() -> manaCost.toInt()
@@ -17,16 +27,6 @@ class ManaInferrerService {
                     else -> R.drawable.ic_unknow
                 }
             }
-        }
-
-        fun computeManaCost(raw: String?): List<Int> {
-            if (raw != null) {
-                return raw.split("([{}])".toRegex())
-                        .filter { !it.isEmpty() }
-                        .map { inferManaType(it) }
-            }
-            // TODO refactor
-            return listOf()
         }
     }
 }
