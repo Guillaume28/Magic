@@ -1,5 +1,6 @@
 package com.example.guillaume.magic.services.api
 
+import com.example.guillaume.magic.Config.apiUrl
 import com.example.guillaume.magic.Result
 import io.reactivex.Observable
 import retrofit2.Retrofit
@@ -17,7 +18,7 @@ interface MagicApiService {
             val retrofit = Retrofit.Builder()
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create())
-                    .baseUrl("https://api.magicthegathering.io/v1/")
+                    .baseUrl(apiUrl)
                     .build()
 
             return retrofit.create(MagicApiService::class.java)
